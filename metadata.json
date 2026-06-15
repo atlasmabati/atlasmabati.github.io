@@ -1,0 +1,6 @@
+{
+  "name": "Atlas Mabati",
+  "description": "Professional digital platform for Atlas Mabati (Atlas Rolling Mill), Kenyan steel roofing manufacturer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
