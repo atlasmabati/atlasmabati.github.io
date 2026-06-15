@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+
+  --color-atlas-yellow: #F2B134;
+  --color-atlas-blue: #273C9C;
+  --color-atlas-blue-dark: #1F2E77;
+  --color-atlas-slate: #1F2937;
+  --color-atlas-light: #F8F9FA;
+}
+
+/* Custom styles for professional layouts */
+@layer base {
+  body {
+    @apply font-sans bg-slate-50 text-slate-900 scroll-smooth antialiased selection:bg-atlas-yellow/30 selection:text-atlas-blue-dark;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F9FA;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F2B134;
+}
+
+/* Timeline vertical line animation support */
+.timeline-pulse {
+  box-shadow: 0 0 0 0 rgba(242, 177, 52, 0.7);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(242, 177, 52, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(242, 177, 52, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(242, 177, 52, 0);
+  }
+}
