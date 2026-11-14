@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex" />
+    <script>
+      // GitHub Pages serves this file for direct SPA routes. Preserve the requested
+      // path, then let the client router restore it after index.html loads.
+      const route = window.location.pathname + window.location.search + window.location.hash;
+      window.location.replace('/?spa-route=' + encodeURIComponent(route));
+    </script>
+  </head>
+  <body></body>
+</html>

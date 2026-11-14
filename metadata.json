@@ -1,0 +1,8 @@
+{
+  "name": "Atlas Mabati Digital Platform",
+  "description": "A professional React website showcasing premium steel roofing products and manufacturing excellence for Kenya’s leading industrial rolling mill. Atlas Mabati Rolling Mills",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

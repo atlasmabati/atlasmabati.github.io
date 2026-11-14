@@ -1,0 +1,2 @@
+This folder is configured for storing manufacturing mill and machinery photographs (e.g., machine-1.jpg, machine-2.jpg, machine-3.jpg).
+Upload your machinery and rolling-mill asset photos here to show them in the Factory Process and Gallery pages.

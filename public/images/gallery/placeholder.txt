@@ -1,0 +1,2 @@
+This folder is configured for storing site installation project photographs (e.g., project-1.jpg, project-2.jpg, project-3.jpg).
+Upload your project image files directly here, and they will be rendered inside the Gallery and Visual Showcase!

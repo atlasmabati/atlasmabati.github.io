@@ -1,0 +1,2 @@
+This folder is configured for storing product images (e.g., box-it4.jpg, roman-tile.jpg, corrugated.jpg, curved-tile.jpg, stone-coated.jpg, ridge-valley.jpg, round-ridge.jpg). 
+You can upload your image files directly here to display them across the products pages!
