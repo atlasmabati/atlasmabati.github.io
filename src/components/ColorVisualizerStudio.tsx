@@ -172,15 +172,15 @@ export const ColorVisualizerStudio: React.FC<ColorVisualizerStudioProps> = ({
               }`}
             >
               {/* Top Controls Overlay */}
-              <div className="flex flex-wrap items-center justify-between gap-2 mb-4 relative z-10">
+              <div className="flex flex-col min-[420px]:flex-row min-[420px]:items-center justify-between gap-2 mb-4 relative z-10">
                 {/* Profile Texture Switcher */}
-                <div className="flex flex-wrap gap-1 bg-slate-950/80 p-1 rounded-xl border border-slate-800">
+                <div className="flex flex-nowrap gap-1 overflow-x-auto overscroll-x-contain bg-slate-950/80 p-1 rounded-xl border border-slate-800 scrollbar-none">
                   {ROOF_TEXTURES.map(tex => (
                     <button
                       key={tex.id}
                       type="button"
                       onClick={() => setSelectedTexture(tex)}
-                      className={`px-2.5 py-1 rounded-lg text-[10px] font-bold transition-all cursor-pointer ${
+                      className={`shrink-0 px-2.5 py-1 rounded-lg text-[10px] font-bold transition-all cursor-pointer ${
                         selectedTexture.id === tex.id
                           ? 'bg-atlas-yellow text-slate-950'
                           : 'text-slate-400 hover:text-white'
@@ -212,10 +212,11 @@ export const ColorVisualizerStudio: React.FC<ColorVisualizerStudioProps> = ({
               </div>
 
               {/* Interactive Architectural Villa SVG */}
-              <div className="relative w-full h-52 sm:h-64 flex items-center justify-center">
+              <div className="relative w-full aspect-[15/7] min-h-[150px] flex items-center justify-center">
                 <svg
                   viewBox="0 0 600 280"
-                  className="w-full h-full max-h-64 drop-shadow-2xl select-none"
+                  preserveAspectRatio="xMidYMid meet"
+                  className="w-full h-auto max-h-64 drop-shadow-2xl select-none"
                   role="img"
                   aria-label={`Architectural Roof Preview in ${selectedColor.name}`}
                   shapeRendering="geometricPrecision"
@@ -334,6 +335,7 @@ export const ColorVisualizerStudio: React.FC<ColorVisualizerStudioProps> = ({
                     points="65,140 165,54 165,140"
                     fill={`url(#pattern-${selectedTexture.id})`}
                     opacity="0.85"
+                    className="roof-texture"
                   />
 
                   {/* 2. Main Center-Right Roof Slope */}
@@ -344,6 +346,7 @@ export const ColorVisualizerStudio: React.FC<ColorVisualizerStudioProps> = ({
                   <polygon
                     points="165,54 455,54 535,140 165,140"
                     fill={`url(#pattern-${selectedTexture.id})`}
+                    className="roof-texture"
                   />
 
                   {/* 3. Right Hip Shading Wedge */}
@@ -362,6 +365,7 @@ export const ColorVisualizerStudio: React.FC<ColorVisualizerStudioProps> = ({
                   <polygon
                     points="95,140 205,68 205,140"
                     fill={`url(#pattern-${selectedTexture.id})`}
+                    className="roof-texture"
                   />
 
                   {/* Right Gable Pitch (Subtle Shadow Side for Volume) */}
@@ -373,6 +377,7 @@ export const ColorVisualizerStudio: React.FC<ColorVisualizerStudioProps> = ({
                     points="205,68 315,140 205,140"
                     fill={`url(#pattern-${selectedTexture.id})`}
                     opacity="0.9"
+                    className="roof-texture"
                   />
 
                   {/* ================= RIDGE CAPS & FASCIA BOARDS ================= */}
